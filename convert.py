@@ -55,11 +55,12 @@ def io(file, action, data=''):
 if __name__ == "__main__":
     try:
         txt_file = sys.argv[1]
+        out_file = '.'.join(txt_file.split('.')[:-1]) + '.html'
 
         data = io(file=txt_file, action='r')
         result = parse(txt=data)
-        io(file=txt_file + '.html', action='w', data=result)
-        sys.exit("OK. check {}".format(txt_file + '.html'))
+        io(file=out_file, action='w', data=result)
+        sys.exit("OK. check {}".format(out_file))
     except IndexError:
         sys.exit("Please input filename.\nex) python3 {} rime.txt".format(sys.argv[0]))
     except IOError:
