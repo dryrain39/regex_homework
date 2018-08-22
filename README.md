@@ -2,7 +2,7 @@
 
 ## Description
 
-Work with python3
+Tested with python3
 
 plain text --> html document
 
